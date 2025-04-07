@@ -24,14 +24,13 @@ def get_category(user_id: int) -> str:
         for product in cart['products']:
             product_category = category_id[product['id']] 
             category_count[product_category] = category_count.get(product_category, 0) + product['quantity']
-            #counter maybe? 6:46 PL 11 tips
+            
     sorted_count = sorted(category_count.items(), key=lambda x: x[1], reverse=True) 
 
     if len(sorted_count) > 0:
         return sorted_count[0][0]
     else:
         return 'none'
-#1:17 w top 10 python mowi o if-else
-# return sorted_count[0][0] if len(sorted_count) > 0 else 'none' - czy moze to tak byc?
+
 
 print(get_category(11))
