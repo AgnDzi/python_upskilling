@@ -5,7 +5,7 @@ import sqlalchemy as sa
 engine = sa.create_engine("sqlite:///:memory:") 
 connection = engine.connect() 
 
-metadata = sa.MetaData() # a to co dokladnie robi?
+metadata = sa.MetaData() 
 
 user_table = sa.Table(
     "user",
